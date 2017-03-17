@@ -52,7 +52,7 @@ which generates the following document:
 [source,json]
 ----
 {
-    "requestedDate":145646464969L,
+    "requestedDate":145646464969,
     "elements":["element1", "element2"]
 }
 ----
@@ -67,7 +67,7 @@ import static org.speedy.jackson.JsonDsl8.*;
 public class JsonTestClass8 {
 
 private JsonNode jsonDocument = jsonDocument(
-    (requestedStartingDate) -> number(15646464969L),
+    (requestedDate) -> number(145646464969L),
     (elements) -> array("element1", "element2")
 );
 
