@@ -277,79 +277,79 @@ abstract class TupleDsl {
         }
 
         static <T extends JsonNode> Tuple<T> of(String left, T right) {
-            return new TupleObject<>(left, right);
+            return new TupleObject<T>(left, right);
         }
 
         static Tuple<TextNode> of(String left, String right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().textNode(right));
+            return new TupleObject<TextNode>(left, jsonNodeFactoryThreadLocal.get().textNode(right));
         }
 
         static Tuple<BooleanNode> of(String left, boolean right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().booleanNode(right));
+            return new TupleObject<BooleanNode>(left, jsonNodeFactoryThreadLocal.get().booleanNode(right));
         }
 
         static Tuple<BooleanNode> of(String left, Boolean right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().booleanNode(right));
+            return new TupleObject<BooleanNode>(left, jsonNodeFactoryThreadLocal.get().booleanNode(right));
         }
 
         static Tuple<NumericNode> of(String left, byte right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<BinaryNode> of(String left, byte[] right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().binaryNode(right));
+            return new TupleObject<BinaryNode>(left, jsonNodeFactoryThreadLocal.get().binaryNode(right));
         }
 
         static Tuple<NumericNode> of(String left, short right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, int right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, long right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, float right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, double right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Byte right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Short right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Integer right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Long right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Float right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<ValueNode> of(String left, Double right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<ValueNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, BigDecimal right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
 
         static Tuple<NumericNode> of(String left, BigInteger right) {
-            return new TupleObject<>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
+            return new TupleObject<NumericNode>(left, jsonNodeFactoryThreadLocal.get().numberNode(right));
         }
     }
 }
