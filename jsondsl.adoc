@@ -1,23 +1,14 @@
 = Json DSL User Guide
 
 :author:    			Wim De Rammelaere
-:publicationDate:      	21/04/2016
-:revision:  			5
-
-NOTE:
-*Publication date:* {publicationDate}
- +
-*Version:* {revision}
 
 == Purpose
 
 ++++
-In the SPO project, you can find in the test folder the java utility be.fgov.mobilit.bcaa.spo.util.JsonDsl.<br/>
 This utility can be used to create a json document without using a large java.lang.String object.<br/>
-By using the JsonDsl, your junit test will also not need to parse the java.lang.String object,
-if your junit test can use a jackson JsonNode.<br/>
+By using the JsonDsl, you can create a jackson JsonNode directly.<br/>
 <br/>
-There is also a second java utility be.fgov.mobilit.bcaa.spo.util.JsonDsl8 which adds support for closures.
+There is also a second java utility org.speedy.jackson.JsonDsl8 which adds support for closures.
 ++++
 
 == Internal implementation
@@ -45,12 +36,12 @@ The utility JsonDsl8 also adds support to pass closures to a json.
 [source,java]
 ----
 import org.codehaus.jackson.JsonNode;
-import static be.fgov.mobilit.bcaa.spo.util.JsonDsl.*;
+import static org.speedy.jackson.JsonDsl.*;
 
 public class JsonTestClass {
 
 private JsonNode jsonDocument = jsonDocument(
-    tuple("requestedStartingDate", 15646464969L),
+    tuple("requestedDate", 145646464969L),
     tuple("elements", array("element1", "element2"))
 );
 
@@ -61,7 +52,7 @@ which generates the following document:
 [source,json]
 ----
 {
-    "requestedStartingDate":15646464969L,
+    "requestedDate":145646464969,
     "elements":["element1", "element2"]
 }
 ----
@@ -71,12 +62,12 @@ in java 8u60 and higher (compiled with _-parameters_ flag), you can also use clo
 [source,java]
 ----
 import org.codehaus.jackson.JsonNode;
-import static be.fgov.mobilit.bcaa.spo.util.JsonDsl8.*;
+import static org.speedy.jackson.JsonDsl8.*;
 
 public class JsonTestClass8 {
 
 private JsonNode jsonDocument = jsonDocument(
-    (requestedStartingDate) -> number(15646464969L),
+    (requestedDate) -> number(145646464969L),
     (elements) -> array("element1", "element2")
 );
 
