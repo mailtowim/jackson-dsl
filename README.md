@@ -5,7 +5,7 @@ Minimum requirements
 ---
 
 * Java 6 for JsonDsl (jackson-dsl.jar)
-* Java 8 for JsonDsl8 (jackson-dsl8.jar)
+* Java 8 for JsonDsl8 (jackson-dsl-lambda.jar)
 
 Documentation
 ---

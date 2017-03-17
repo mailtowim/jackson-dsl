@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.speedy.jackson</groupId>
-    <artifactId>jackson-dsl8</artifactId>
-    <version>1.0.0</version>
+    <artifactId>jackson-dsl-lambda</artifactId>
+    <version>1.1.0</version>
 
     <build>
         <plugins>
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>org.speedy.jackson</groupId>
             <artifactId>jackson-dsl</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 
