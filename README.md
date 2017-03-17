@@ -1,5 +1,5 @@
 # jackson-dsl
-Dsl to make jackson objects
+Dsl to make jackson 1.x objects
 
 Minimum requirements
 ---
